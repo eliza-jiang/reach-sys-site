@@ -1,11 +1,129 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8" />
-  <title>Reach-Sys</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>璿琦智能有限公司 | 工程導向軟硬體整合專家</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+    </style>
 </head>
-<body>
-  <h1>Reach System Integration</h1>
-  <p>網站建置中</p>
+<body class="bg-slate-50 text-slate-800">
+
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold tracking-tight text-blue-900">璿琦智能</span>
+                <span class="hidden md:inline border-l border-gray-300 ml-3 pl-3 text-gray-400 text-xs tracking-widest uppercase">Reach Intelligence  Co., Ltd.</span>
+            </div>
+            <div class="flex space-x-6 text-sm font-bold">
+                <a href="#about" class="hover:text-blue-600 transition">公司定位</a>
+                <a href="#services" class="hover:text-blue-600 transition">服務項目</a>
+                <a href="#contact" class="text-blue-700 border border-blue-700 px-4 py-1.5 rounded hover:bg-blue-50 transition">聯絡我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-48 pb-32 hero-bg text-white px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-8 leading-tight tracking-wide">工程導向的軟硬體整合<br>& 工業通訊系統建置</h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed mb-12 font-light">
+                量測 · 自動化 · 系統驗證
+            </p>
+            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="border-l-4 border-blue-600 pl-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-8">公司簡介與定位</h2>
+                <div class="text-lg text-slate-600 leading-loose space-y-6">
+                    <p>
+                        本公司專注於<span class="text-slate-900 font-bold">工程導向的軟硬體整合與工業通訊系統建置</span>，涵蓋量測、自動化與系統驗證相關應用。
+                    </p>
+                    <p>
+                        我們擅長將客戶的需求與複雜的技術架構，轉化為<span class="text-blue-700 font-medium">可實際運行、可量測、可維護</span>的系統解決方案，協助研發與工程團隊縮短開發時間、降低系統整合風險。
+                    </p>
+                    <p>
+                        服務內容包含工業通訊整合、量測與資料擷取、嵌入式與即時系統開發，以及客製化工程技術支援。
+                    </p>
+                </div>
+            </div>
+
+            <!--<div class="mt-16 bg-slate-50 p-8 rounded-xl flex flex-col md:flex-row md:items-center justify-between">
+                <div>
+                    <p class="text-sm text-slate-400 uppercase tracking-widest mb-1">Company Name</p>
+                    <p class="text-xl font-bold text-slate-800">璿琦智能有限公司</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <p class="text-sm text-slate-400 uppercase tracking-widest mb-1">Representative</p>
+                    <p class="text-xl font-bold text-slate-800">劉建甫</p>
+                </div>
+            </div>-->
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-widest">主要服務項目</h2>
+                <p class="text-slate-400 mt-2">Core Services</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="text-blue-600 text-3xl mb-6"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="text-xl font-bold mb-6 border-b pb-4">軟硬體系統整合</h3>
+                    <ul class="text-slate-600 space-y-3 text-sm">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>控制&量測 系統開發</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>FPGA 即時控制與處理</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>IoT 工業通訊架構整合</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>BMS 設備開發</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="text-blue-600 text-3xl mb-6"><i class="fas fa-chart-area"></i></div>
+                    <h3 class="text-xl font-bold mb-6 border-b pb-4">量測、擷取與分析</h3>
+                    <ul class="text-slate-600 space-y-3 text-sm">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>高速資料擷取系統</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>即時監測與分析 (HIL)</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>客製化量測架構設計</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="text-blue-600 text-3xl mb-6"><i class="fas fa-tools"></i></div>
+                    <h3 class="text-xl font-bold mb-6 border-b pb-4">客製化工程開發</h3>
+                    <ul class="text-slate-600 space-y-3 text-sm">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>研究實驗平台建置</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>工業控制與測試系統</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>客製化控制與量測方案</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-slate-900">聯繫我們</h2>
+            <p class="text-slate-500 mb-12 text-lg">縮短研發時程，為您的系統建立堅實基礎。我們期待與您討論技術方案。</p>
+            <a href="mailto:contact@shuan-chi.com" class="bg-blue-900 text-white px-12 py-4 rounded-full font-bold hover:bg-black transition shadow-lg inline-block">
+                發送電子郵件
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-50 border-t border-slate-200 text-center">
+        <p class="text-slate-400 text-xs tracking-widest uppercase">© 2026 璿琦智能有限公司 Shuan Chi Intelligent Co., Ltd.</p>
+    </footer>
+
 </body>
+
 </html>
