@@ -9,7 +9,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
         body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
-        .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .hero-bg { 
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.9)), 
+                        url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80'); /* 工業自動化背景圖 */
+            background-size: cover;
+            background-position: center;
+        }
+        .img-overlay { transition: all 0.5s ease; }
+        .img-container:hover .img-overlay { background: rgba(30, 58, 138, 0.7); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -18,53 +25,40 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <span class="text-2xl font-bold tracking-tight text-blue-900">璿琦智能</span>
-                <span class="hidden md:inline border-l border-gray-300 ml-3 pl-3 text-gray-400 text-xs tracking-widest uppercase">Reach Intelligence  Co., Ltd.</span>
+                <span class="hidden md:inline border-l border-gray-300 ml-3 pl-3 text-gray-400 text-xs tracking-widest uppercase">Reach Intelligence Co., Ltd.</span>
             </div>
             <div class="flex space-x-6 text-sm font-bold">
-                <a href="#about" class="hover:text-blue-600 transition">公司定位</a>
+                <a href="#about" class="hover:text-blue-600 transition">公司簡介</a>
                 <a href="#services" class="hover:text-blue-600 transition">服務項目</a>
+                <a href="#applications" class="hover:text-blue-600 transition">應用領域</a>
                 <a href="#contact" class="text-blue-700 border border-blue-700 px-4 py-1.5 rounded hover:bg-blue-50 transition">聯絡我們</a>
             </div>
         </div>
     </nav>
 
-    <header class="pt-48 pb-32 hero-bg text-white px-6">
+    <header class="pt-64 pb-48 hero-bg text-white px-6">
         <div class="max-w-5xl mx-auto text-center">
-            <h1 class="text-3xl md:text-5xl font-bold mb-8 leading-tight tracking-wide">工程導向的軟硬體整合<br>& 工業通訊系統建置</h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed mb-12 font-light">
-                量測 · 自動化 · 系統驗證
+            <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-wide">工程導向的軟硬體整合<br>& 工業通訊系統建置</h1>
+            <p class="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-12 font-light">
+                專業量測 · 自動化控制 · 系統驗證解決方案
             </p>
-            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+            <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
     </header>
 
     <section id="about" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-6">
             <div class="border-l-4 border-blue-600 pl-8">
-                <h2 class="text-3xl font-bold text-slate-900 mb-8">公司簡介與定位</h2>
-                <div class="text-lg text-slate-600 leading-loose space-y-6">
+                <h2 class="text-3xl font-bold text-slate-900 mb-8">公司簡介</h2>
+                <div class="text-lg text-slate-600 leading-loose space-y-6 text-justify">
                     <p>
-                        本公司專注於<span class="text-slate-900 font-bold">工程導向的軟硬體整合與工業通訊系統建置</span>，涵蓋量測、自動化與系統驗證相關應用。
+                        本公司專注於<span class="text-slate-900 font-bold">工程導向的軟硬體整合與工業通訊系統建置</span>，核心技術涵蓋高速量測、即時控制與複雜系統驗證。
                     </p>
                     <p>
-                        我們擅長將客戶的需求與複雜的技術架構，轉化為<span class="text-blue-700 font-medium">可實際運行、可量測、可維護</span>的系統解決方案，協助研發與工程團隊縮短開發時間、降低系統整合風險。
-                    </p>
-                    <p>
-                        服務內容包含工業通訊整合、量測與資料擷取、嵌入式與即時系統開發，以及客製化工程技術支援。
+                        我們擅長將複雜的物理需求轉化為<span class="text-blue-700 font-medium">數位化、可量測、可維護</span>的系統架構，協助研發團隊降低整合風險並縮短產品上市時程。
                     </p>
                 </div>
             </div>
-
-            <!--<div class="mt-16 bg-slate-50 p-8 rounded-xl flex flex-col md:flex-row md:items-center justify-between">
-                <div>
-                    <p class="text-sm text-slate-400 uppercase tracking-widest mb-1">Company Name</p>
-                    <p class="text-xl font-bold text-slate-800">璿琦智能有限公司</p>
-                </div>
-                <div class="mt-6 md:mt-0">
-                    <p class="text-sm text-slate-400 uppercase tracking-widest mb-1">Representative</p>
-                    <p class="text-xl font-bold text-slate-800">劉建甫</p>
-                </div>
-            </div>-->
         </div>
     </section>
 
@@ -76,54 +70,92 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
-                    <div class="text-blue-600 text-3xl mb-6"><i class="fas fa-project-diagram"></i></div>
-                    <h3 class="text-xl font-bold mb-6 border-b pb-4">軟硬體系統整合</h3>
+                <div class="bg-white p-10 rounded-lg shadow-sm hover:shadow-xl transition-all border border-slate-100">
+                    <div class="text-blue-600 text-3xl mb-6"><i class="fas fa-microchip"></i></div>
+                    <h3 class="text-xl font-bold mb-6 border-b pb-4 text-blue-900">軟硬體系統整合</h3>
                     <ul class="text-slate-600 space-y-3 text-sm">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>控制&量測 系統開發</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>FPGA 即時控制與處理</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>IoT 工業通訊架構整合</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>BMS 設備開發</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>FPGA 即時控制系統開發</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>BMS 電池管理設備研發</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>工業物聯網 (IIoT) 架構</li>
                     </ul>
                 </div>
 
-                <div class="bg-white p-10 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
-                    <div class="text-blue-600 text-3xl mb-6"><i class="fas fa-chart-area"></i></div>
-                    <h3 class="text-xl font-bold mb-6 border-b pb-4">量測、擷取與分析</h3>
+                <div class="bg-white p-10 rounded-lg shadow-sm hover:shadow-xl transition-all border border-slate-100">
+                    <div class="text-blue-600 text-3xl mb-6"><i class="fas fa-wave-square"></i></div>
+                    <h3 class="text-xl font-bold mb-6 border-b pb-4 text-blue-900">量測與擷取分析</h3>
                     <ul class="text-slate-600 space-y-3 text-sm">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>高速資料擷取系統</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>即時監測與分析 (HIL)</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>客製化量測架構設計</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>高速資料擷取 (DAQ) 系統</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>硬體在環 (HIL) 模擬測試</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>振動與聲學監測系統</li>
                     </ul>
                 </div>
 
-                <div class="bg-white p-10 rounded-lg shadow-sm hover:shadow-md transition border border-slate-100">
-                    <div class="text-blue-600 text-3xl mb-6"><i class="fas fa-tools"></i></div>
-                    <h3 class="text-xl font-bold mb-6 border-b pb-4">客製化工程開發</h3>
+                <div class="bg-white p-10 rounded-lg shadow-sm hover:shadow-xl transition-all border border-slate-100">
+                    <div class="text-blue-600 text-3xl mb-6"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="text-xl font-bold mb-6 border-b pb-4 text-blue-900">客製化工程開發</h3>
                     <ul class="text-slate-600 space-y-3 text-sm">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>研究實驗平台建置</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>工業控制與測試系統</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>客製化控制與量測方案</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>LabVIEW 專業軟體開發</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>客製化自動測試設備 (ATE)</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>研究型實驗平台建置</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6 text-slate-900">聯繫我們</h2>
-            <p class="text-slate-500 mb-12 text-lg">縮短研發時程，為您的系統建立堅實基礎。我們期待與您討論技術方案。</p>
-            <a href="mailto:contact@shuan-chi.com" class="bg-blue-900 text-white px-12 py-4 rounded-full font-bold hover:bg-black transition shadow-lg inline-block">
-                發送電子郵件
-            </a>
+    <section id="applications" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-widest">應用領域</h2>
+                <p class="text-slate-400 mt-2">Application Areas</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="relative overflow-hidden rounded-xl group img-container h-64">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 flex items-end p-6 img-overlay">
+                        <p class="text-white font-bold">工業通訊與數據中心</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-xl group img-container h-64">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 flex items-end p-6 img-overlay">
+                        <p class="text-white font-bold">精密量測與自動化驗證</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-xl group img-container h-64">
+                    <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&q=80" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 flex items-end p-6 img-overlay">
+                        <p class="text-white font-bold">嵌入式系統與電力管理</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-xl group img-container h-64">
+                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/40 flex items-end p-6 img-overlay">
+                        <p class="text-white font-bold">系統盤體整合工程</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-slate-50 border-t border-slate-200 text-center">
-        <p class="text-slate-400 text-xs tracking-widest uppercase">© 2026 璿琦智能有限公司 Shuan Chi Intelligent Co., Ltd.</p>
+    <section id="contact" class="py-32 hero-bg text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">準備好開始您的專案了嗎？</h2>
+            <p class="text-slate-300 mb-12 text-lg">縮短研發時程，為您的系統建立堅實基礎。我們期待與您討論技術方案。</p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="mailto:support@reach-sys.com" class="bg-blue-600 text-white px-12 py-4 rounded-full font-bold hover:bg-blue-700 transition shadow-xl w-full md:w-auto">
+                    聯絡我們
+                </a>
+                <!--<span class="text-slate-400">或</span>
+                <p class="text-xl font-light tracking-widest text-blue-300">reach-sys.com</p>-->
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-900 text-slate-500 text-center">
+        <p class="text-xs tracking-widest uppercase">© 2026 璿琦智能有限公司 REACH INTELLIGENCE CO., LTD.</p>
     </footer>
 
 </body>
-
 </html>
